@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Toms Calling App"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.063" />
+
+    <Button
+        android:id="@+id/StartCallButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="StartCall"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.147"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.825" />
+
+    <Button
+        android:id="@+id/EndCallButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="EndCall"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.776"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.825" />
+
+
+    <LinearLayout
+        android:layout_width="328dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="60dp"
+        android:divider="@drawable/empty_tall_divider"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:showDividers="middle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.385"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.168">
+
+
+        <Button
+            android:id="@+id/Key1"
+            android:layout_width="55dp"
+            android:layout_height="52dp"
+            android:text="1" />
+
+        <Button
+            android:id="@+id/Key2"
+            android:layout_width="55dp"
+            android:layout_height="52dp"
+            android:text="2" />
+
+        <Button
+            android:id="@+id/Key3"
+            android:layout_width="55dp"
+            android:layout_height="52dp"
+            android:text="3" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="328dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="200dp"
+        android:divider="@drawable/empty_tall_divider"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:showDividers="middle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.385"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.102">
+
+
+        <Button
+            android:id="@+id/Key4"
+            android:layout_width="55dp"
+            android:layout_height="52dp"
+            android:text="4" />
+
+        <Button
+            android:id="@+id/Key5"
+            android:layout_width="55dp"
+            android:layout_height="52dp"
+            android:text="5" />
+
+        <Button
+            android:id="@+id/Key6"
+            android:layout_width="55dp"
+            android:layout_height="52dp"
+            android:text="6" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="328dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="332dp"
+        android:divider="@drawable/empty_tall_divider"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:showDividers="middle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.385"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.066">
+
+
+        <Button
+            android:id="@+id/Key7"
+            android:layout_width="55dp"
+            android:layout_height="52dp"
+            android:text="7" />
+
+        <Button
+            android:id="@+id/Key8"
+            android:layout_width="55dp"
+            android:layout_height="52dp"
+            android:text="8" />
+
+        <Button
+            android:id="@+id/Key9"
+            android:layout_width="55dp"
+            android:layout_height="52dp"
+            android:text="9" />
+
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/editTextNumber"
+        android:layout_width="303dp"
+        android:layout_height="64dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.296"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.069" />
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="68dp"
+        android:layout_height="45dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.997"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.164"
+        app:srcCompat="@drawable/delete_number_image" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
