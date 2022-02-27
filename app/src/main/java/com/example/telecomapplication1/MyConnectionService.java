@@ -20,8 +20,6 @@ import androidx.core.app.ActivityCompat;
 @RequiresApi(api = Build.VERSION_CODES.M)
 public class MyConnectionService extends ConnectionService {
 
-
-
     Context mContext;
     TelecomManager mTelecomManager;
     PhoneAccountHandle mPhoneAccountHandle = new PhoneAccountHandle(new ComponentName(CONSTANTS.PACKAGE_NAME, CONSTANTS.COMPONENT_NAME), "1234");

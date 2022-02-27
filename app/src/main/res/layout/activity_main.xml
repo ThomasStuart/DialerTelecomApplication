@@ -17,7 +17,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.063" />
+        app:layout_constraintVertical_bias="0.053" />
 
     <Button
         android:id="@+id/StartCallButton"
@@ -26,10 +26,11 @@
         android:text="StartCall"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.147"
+        app:layout_constraintHorizontal_bias="0.154"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.825" />
+        app:layout_constraintVertical_bias="0.856" />
+
 
     <Button
         android:id="@+id/EndCallButton"
@@ -41,10 +42,10 @@
         app:layout_constraintHorizontal_bias="0.776"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.825" />
-
+        app:layout_constraintVertical_bias="0.856" />
 
     <LinearLayout
+        android:id="@+id/linearLayout2"
         android:layout_width="328dp"
         android:layout_height="59dp"
         android:layout_marginTop="60dp"
@@ -57,12 +58,12 @@
         app:layout_constraintHorizontal_bias="0.385"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:layout_constraintVertical_bias="0.168">
+        app:layout_constraintVertical_bias="0.124">
 
 
         <Button
             android:id="@+id/Key1"
-            android:layout_width="55dp"
+            android:layout_width="57dp"
             android:layout_height="52dp"
             android:text="1" />
 
@@ -81,6 +82,7 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="328dp"
         android:layout_height="59dp"
         android:layout_marginTop="200dp"
@@ -93,7 +95,7 @@
         app:layout_constraintHorizontal_bias="0.385"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:layout_constraintVertical_bias="0.102">
+        app:layout_constraintVertical_bias="0.022">
 
 
         <Button
@@ -119,7 +121,6 @@
     <LinearLayout
         android:layout_width="328dp"
         android:layout_height="59dp"
-        android:layout_marginTop="332dp"
         android:divider="@drawable/empty_tall_divider"
         android:gravity="center"
         android:orientation="horizontal"
@@ -129,7 +130,7 @@
         app:layout_constraintHorizontal_bias="0.385"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:layout_constraintVertical_bias="0.066">
+        app:layout_constraintVertical_bias="0.485">
 
 
         <Button
@@ -149,6 +150,43 @@
             android:layout_width="55dp"
             android:layout_height="52dp"
             android:text="9" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="328dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="332dp"
+        android:divider="@drawable/empty_tall_divider"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:showDividers="middle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.385"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.192">
+
+
+        <Button
+            android:id="@+id/KeyStar"
+            android:layout_width="55dp"
+            android:layout_height="52dp"
+            android:text="*" />
+
+        <Button
+            android:id="@+id/Key0"
+            android:layout_width="55dp"
+            android:layout_height="52dp"
+            android:text="0" />
+
+        <Button
+            android:id="@+id/KeyPound"
+            android:layout_width="55dp"
+            android:layout_height="52dp"
+            android:text="#" />
 
     </LinearLayout>
 

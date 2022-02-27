@@ -18,6 +18,9 @@ import android.telecom.PhoneAccountHandle;
 import android.telecom.TelecomManager;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.ImageButton;
+import android.widget.TextView;
 
 @RequiresApi(api = Build.VERSION_CODES.S)
 public class MainActivity extends AppCompatActivity {
@@ -56,10 +59,157 @@ public class MainActivity extends AppCompatActivity {
                 endPhoneCall();
             }
         });
+
+        // init backspace button
+        ImageButton backSpaceButton = (ImageButton) findViewById(R.id.imageButton);
+        backSpaceButton.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v){
+                try{
+                    deleteLastChar();
+                }
+                catch (Exception e){
+                    e.printStackTrace();
+                }
+            }
+        });
+
+        initDialPad();
+    }
+
+    public void initDialPad(){
+
+        Button zeroButton = (Button) findViewById(R.id.Key0);
+        zeroButton.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                addDigitToDisplay(Digits.ZERO);
+            }
+        });
+
+        Button oneButton = (Button) findViewById(R.id.Key1);
+        oneButton.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                addDigitToDisplay(Digits.ONE);
+            }
+        });
+
+        Button twoButton = (Button) findViewById(R.id.Key2);
+        twoButton.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                addDigitToDisplay(Digits.TWO);
+            }
+        });
+
+        Button threeButton = (Button) findViewById(R.id.Key3);
+        threeButton.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                addDigitToDisplay(Digits.THREE);
+            }
+        });
+
+
+        Button fourButton = (Button) findViewById(R.id.Key4);
+        fourButton.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                addDigitToDisplay(Digits.FOUR);
+            }
+        });
+
+        Button fiveButton = (Button) findViewById(R.id.Key5);
+        fiveButton.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                addDigitToDisplay(Digits.FIVE);
+            }
+        });
+
+        Button sixButton = (Button) findViewById(R.id.Key6);
+        sixButton.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                addDigitToDisplay(Digits.SIX);
+            }
+        });
+
+        Button sevenButton = (Button) findViewById(R.id.Key7);
+        sevenButton.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                addDigitToDisplay(Digits.SEVEN);
+            }
+        });
+
+        Button eightButton = (Button) findViewById(R.id.Key8);
+        eightButton.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                addDigitToDisplay(Digits.EIGHT);
+            }
+        });
+
+        Button nineButton = (Button) findViewById(R.id.Key9);
+        nineButton.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                addDigitToDisplay(Digits.NINE);
+            }
+        });
+    }
+
+
+    public void addDigitToDisplay(Digits digitsEnum){
+        Character value = ' ';
+
+        switch (digitsEnum){
+            case ZERO:
+                value = '0';
+                break;
+            case ONE:
+                value = '1';
+                break;
+            case TWO:
+                value = '2';
+                break;
+            case THREE:
+                value = '3';
+                break;
+            case FOUR:
+                value = '4';
+                break;
+            case FIVE:
+                value = '5';
+                break;
+            case SIX:
+                value = '6';
+                break;
+            case SEVEN:
+                value = '7';
+                break;
+            case EIGHT:
+                value = '8';
+                break;
+            case NINE:
+                value = '9';
+                break;
+
+        }
+        EditText editText  = findViewById(R.id.editTextNumber);
+        String finalText = editText.getText().toString() + value;
+
+        editText.setText(finalText, TextView.BufferType.EDITABLE);
+
+    }
+
+    public void deleteLastChar(){
+        EditText editText  = findViewById(R.id.editTextNumber);
+        String currentText = editText.getText().toString();
+        if( currentText.length() > 0) {
+            String finalText = currentText.substring(0, currentText.length() - 1);
+            editText.setText(finalText, TextView.BufferType.EDITABLE);
+        }
+    }
+
+    public String getPhoneNumberInput(){
+        EditText editText = findViewById(R.id.editTextNumber);
+        return editText.getText().toString();
     }
 
     public void startPhoneCall() {
-        Uri uri = Uri.fromParts("tel", CONSTANTS.PHONE_NUMBER, null);
+        Uri uri = Uri.fromParts("tel", getPhoneNumberInput(), null);
         Bundle extras = new Bundle();
 
         mTelecomManager = (TelecomManager) mContext.getSystemService(Context.TELECOM_SERVICE);
